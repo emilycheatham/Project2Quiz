@@ -1,3 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* General styles */
 body {
-    background: blue;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Header and Logo */
+
+body {
+    background: url("../images/scroll.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+/*Quiz container - questions and answer buttons */
+.container {
+    width: 800px;
+    max-width: 80%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px;
+}
+
+.btn {
+    border: 1px solid;
+    border-color: #000;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.btn:hover {
+    border-color: black;
+    background-color: #c39a1c;
+}
+
+.btn.correct{
+    background-color: green;
+}
+
+.btn.wrong {
+    background-color: red;
+}
+
+.start-btn, .next-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
 }
