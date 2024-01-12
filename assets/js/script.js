@@ -1,5 +1,6 @@
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
+const resultsButton = document.getElementById('results-btn');
 const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -11,7 +12,12 @@ let shuffledQuestions, currentQuestionIndex;
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
-    setNextQuestion();
+    if (currentQuestionIndex < 10) {
+        setNextQuestion();
+    } else {
+        resultsButton.classList.remove('hide');
+    }
+    
 })
 
 /** 
@@ -47,7 +53,7 @@ function showQuestion(question) {
     })
 }
 
-/* Hides the answer buttons, to display current question's answers in buttons */
+/* Hides the old answer buttons, to display current question's answers in buttons */
 function resetState() {
     nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
@@ -65,20 +71,20 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);     
     })
-    if (shuffledQuestions.length > 10 ) {
+    if (currentQuestionIndex < 9 ) {
         nextButton.classList.remove('hide');
-    } else { 
-        startButton.innerText = "Restart the test paper";
-        startButton.classList.remove('hide');
+        resultsButton.classList.add('hide');
+    } else {
+        resultsButton.classList.remove('hide');
     }
 }
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('wrong')
+        element.classList.add('wrong');
     }
 }
 
@@ -86,6 +92,7 @@ function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
+
 
 /* Questions and Answers. */
 const questions =
