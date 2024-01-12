@@ -14,6 +14,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    font-family: 'Arima', sans-serfif;
 }
 
 /*Header and Logo */
@@ -29,6 +30,11 @@ body {
     max-width: 80%;
     border-radius: 5px;
     padding: 10px;
+}
+
+#question {
+    text-align: center;
+    font-weight: 600;
 }
 
 .btn-grid {
@@ -52,11 +58,11 @@ body {
 }
 
 .btn.correct{
-    background-color: green;
+    background-color: #3ac635
 }
 
 .btn.wrong {
-    background-color: red;
+    background-color: #C00C;
 }
 
 .start-btn, .next-btn {
