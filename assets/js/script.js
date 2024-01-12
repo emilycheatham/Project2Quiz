@@ -98,6 +98,8 @@ function clearStatusClass(element) {
 }
 
 
+
+
 /* Questions and Answers. */
 const questions =
     [
@@ -462,5 +464,3 @@ const questions =
             ]
         },
     ];
-
-

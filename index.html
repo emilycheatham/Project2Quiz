@@ -15,12 +15,20 @@
     <title>Harry Potter Quiz</title>
 </head>
 <body>
+    <!-- Header section -->
+    <header>
+        <a href="index.html" aria-label="Go to home page">
+            <img id="logo" src="assets/images/harry-potter-logo.jpg" alt="Harry Potter logo" /></a>
+    </header>
+
+    <main>
+        <!-- Game Area -->
     <div class="container">
-        
         <div id="question-container" class="hide">
             <div id="question-counter">
             Question <span id="current-question">1</span> of 10 
             </div>
+            <!--Question and Answer buttons -->
             <div id=question>Question displayed here</div>
             <div id="answer-buttons" class="btn-grid">
                 <button class="btn"> Answer A </button>
@@ -29,12 +37,22 @@
                 <button class="btn"> Answer D </button>
             </div>
         </div>
+
+        <!-- Control buttons -->
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start your OWLs</button>
             <button id="next-btn" class="next-btn btn hide">Next Question</button>
             <button id="results-btn" class="results-btn btn hide">See Test Results</button>
-        </div>    
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="hide"></div>
     </div>
+    </main>
+
+    <footer>
+        <p> © Created by Emily Cheatham </p>
+    </footer>
     
 
     <script src="assets/js/script.js"></script>
