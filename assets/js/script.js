@@ -22,8 +22,8 @@ nextButton.addEventListener('click', () => {
 
 /** 
  * Starts the game by hiding the start button and showing the question container element
- * Questions are shuffled and displayed at random
- * Question counter starts from 0
+ * Questions are shuffled and 10 questions will be displayed at random
+ * Question counter will add 1 each question
  */
 function startGame() {
     startButton.classList.add("hide");
@@ -41,8 +41,9 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     const currentQuestionNumber = document.getElementById("current-question");
+    currentQuestionNumber.classList.remove("hide"); 
     currentQuestionNumber.innerText = currentQuestionIndex + 1; 
-    
+
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement("button");

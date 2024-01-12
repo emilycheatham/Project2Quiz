@@ -24,7 +24,7 @@ body {
     position: relative;
 }
 
-/*Quiz container - questions and answer buttons */
+/*Quiz container - question counter, questions, and answer buttons */
 .container {
     width: 800px;
     max-width: 80%;
@@ -32,9 +32,14 @@ body {
     padding: 10px;
 }
 
+#question-counter {
+    padding: 30px, 0;
+    margin-bottom: 20px;
+}
+
 #question {
     text-align: center;
-    font-weight: 600;
+    font-size: 25px;
 }
 
 .btn-grid {
@@ -50,6 +55,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     justify-content: center;
+    font-weight: bold;
 }
 
 .btn:hover {
@@ -65,7 +71,8 @@ body {
     background-color: #C00C;
 }
 
-.start-btn, .next-btn {
+/* Contols buttons */
+.start-btn, .next-btn, .results-btn {
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -75,6 +82,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+
 
 .hide {
     display: none;
