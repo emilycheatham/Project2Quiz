@@ -40,6 +40,9 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
+    const currentQuestionNumber = document.getElementById("current-question");
+    currentQuestionNumber.innerText = currentQuestionIndex + 1; 
+    
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement("button");
