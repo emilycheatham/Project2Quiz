@@ -105,7 +105,7 @@ const questions =
             answers: [
                 { text: "200", correct: false },
                 { text: "100", correct: false },
-                { text: "2", correct: false },
+                { text: "175", correct: false },
                 { text: "150", correct: true },
             ]
         },
@@ -155,7 +155,7 @@ const questions =
             ]
         },
         {
-            question: "According to the sign in Borgin & Burkes how many muggles had the opal necklace killed?",
+            question: "According to the sign in Borgin & Burkes, how many muggles had the opal necklace killed?",
             answers: [
                 { text: "20", correct: false },
                 { text: "22", correct: false },
@@ -173,7 +173,7 @@ const questions =
             ]
         },
         {
-            question: "What does Dudley throw What was the vault number that the Philosopher's stone was in?",
+            question: "What was the vault number that the Philosopher's stone was in?",
             answers: [
                 { text: "713", correct: true },
                 { text: "715", correct: false },
@@ -281,7 +281,7 @@ const questions =
             ]
         },
         {
-            question: "How long had the entrance to the Chanmber of Secrets been sealed?",
+            question: "How long had the entrance to the Chamber of Secrets been sealed?",
             answers: [
                 { text: "40 years", correct: false },
                 { text: "50 years", correct: true },
@@ -299,7 +299,7 @@ const questions =
             ]
         },
         {
-            question: "What colour is the Phiosophers stone??",
+            question: "What colour is the Philosopher's stone?",
             answers: [
                 { text: "Pink", correct: false },
                 { text: "Blue", correct: false },
@@ -362,7 +362,7 @@ const questions =
             ]
         },
         {
-            question: "What dis Ginny Weasley's middle name?",
+            question: "What is Ginny Weasley's middle name?",
             answers: [
                 { text: "Jenny", correct: false },
                 { text: "Lily", correct: false },
@@ -411,7 +411,7 @@ const questions =
             answers: [
                 { text: "Dominic", correct: false },
                 { text: "Daniel", correct: false },
-                { text: "Denis", correct: true },
+                { text: "Dennis", correct: true },
                 { text: "Damon", correct: false },
             ]
         },
@@ -452,7 +452,7 @@ const questions =
             ]
         },
         {
-            question: "Sirius Black was sent to Azkaban as it was beleived he has murdered who?",
+            question: "Sirius Black was sent to Azkaban as it was believed he had murdered who?",
             answers: [
                 { text: "Milicent Bulstrode", correct: false },
                 { text: "Tom Riddle", correct: false },
