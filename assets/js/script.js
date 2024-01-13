@@ -17,7 +17,6 @@ nextButton.addEventListener('click', () => {
     } else {
         resultsButton.classList.remove('hide');
     }
-    
 })
 
 /** 
@@ -36,7 +35,6 @@ function startGame() {
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-
 }
 
 function showQuestion(question) {
@@ -66,7 +64,9 @@ function resetState() {
 }
 
 /**
- * When clicking on button, it checks if it is the correct answer or not
+ * Upon clicking an answer button
+ * If the question is less than 10, it will show the next button
+ * If it question 10, it will show results button
  */ 
 function selectAnswer(e) {
     const selectedButton = e.target;
@@ -83,6 +83,10 @@ function selectAnswer(e) {
     }
 }
 
+/* If the answer is correct, changes button background colour to green
+* and add point to correct counter
+* If the answer is wrong, changes button background colour to red
+*/
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
