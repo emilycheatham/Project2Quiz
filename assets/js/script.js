@@ -4,6 +4,9 @@ const resultsButton = document.getElementById('results-btn');
 const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
+const resultsArea = document.getElementById('results-area');
+let finalScoreElement = document.getElementById('score');
+let finalScore = parseInt(finalScoreElement.innerText);
 
 /* Variable so questions are shuffled so different question is displayed each time you play */
 let shuffledQuestions, currentQuestionIndex;
@@ -91,6 +94,7 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct');
+        document.getElementById("score").innerText = ++finalScore;
     } else {
         element.classList.add('wrong');
     }
@@ -100,3 +104,16 @@ function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
+
+/** 
+ * When click on results button goes to results page
+*/
+resultsButton.addEventListener("click",  () => {
+    resultsButton.classList.add('hide');
+    questionContainerElement.classList.add('hide');
+    resultsArea.classList.remove('hide');
+    finalResults();
+})
+
+function finalResults() {
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`}
