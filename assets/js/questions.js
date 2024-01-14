@@ -353,6 +353,96 @@ const questions =
             ]
         },
         {
+            question: "What colour is Felix Felicis?",
+            answers: [
+                { text: "Silver", correct: false },
+                { text: "Gold", correct: true },
+                { text: "Bronze", correct: false },
+                { text: "Copper", correct: false }
+            ]
+        },
+        {
+            question: 'What potion will transforms the drinker into the physical form of another?',
+            answers: [
+                { text: "Daught of Peace", correct: false },
+                { text: "Vertaserum", correct: false },
+                { text: "Amortenia", correct: false },
+                { text: 'Polyjuice potion', correct: true }
+            ]
+        },
+        {
+            question: "What are the effects of the Draught of Living Death?",
+            answers: [
+            { text: "The user is wide awake", correct: false },
+            { text: "Same effects as alcohol", correct: false },
+            { text: "Instant death", correct: false },
+            { text: "A powerful sleeping potion", correct: true }
+            ]
+        },
+        {
+            question: "What does Amortentia smell like?",
+             answers: [
+            { text: "Apples", correct: false },
+            { text: "Mown grass and parchment", correct: false },
+            { text: "What attracts the person smelling it", correct: true },
+            { text: "It has no smell", correct: false }
+            ]
+        },
+        {
+            question: "Used to cure common colds, what is a common side effect of Pepperup Potion?",
+            answers: [
+            { text: "Tasting pepper", correct: false },
+            { text: "Ears steaming for hours", correct: true },
+            { text: "Feeling the need to jump", correct: false },
+            { text: "Pupils turning into a star shape", correct: false }
+        ]
+    },
+    {
+            question: "What type of berries are included in a Forgetfulness Potion?",
+            answers: [
+            { text: "Acai berries", correct: false },
+            { text: "Elderberries", correct: false },
+            { text: "Goji berries", correct: false },
+            { text: "Mistletoe berries", correct: true }
+        ]
+    },
+    {
+            question: "In which potion would you put puffer-fish eyes, dried nettles and bat spleens?",
+        answers: [
+            { text: "Swelling Solution", correct: true },
+            { text: "Sleeping Potion", correct: false },
+            { text: "Shrinking Solution", correct: false },
+            { text: "Screaming Silencer", correct: false }
+        ]
+    },
+    {
+    question: "What is the name of the potion that helps tame even the bushiest of hair types?",
+        answers: [
+            { text: "Birds Nest No More Potion", correct: false },
+            { text: "Sleekeazy’s Hair Potion", correct: true },
+            { text: "Smooth Hair Potion", correct: false },
+            { text: "Tame the Beast Hair Potion", correct: false }
+        ]
+    },
+    {
+        question: "How many uses are there for dragon’s blood?",
+        answers: [
+            { text: "9", correct: false },
+            { text: "10", correct: false },
+            { text: "11", correct: false },
+            { text: "12", correct: true }
+        ]
+    },
+    {
+        question: "What potions would relieve the effects of Lycanthropy?",
+        answers: [
+            { text: "Wolfsbane Potion", correct: true },
+            { text: "Wolfdraught", correct: false },
+            { text: "Wolfslixer", correct: false },
+            { text: "Wolfmount", correct: false }
+        ]
+    },
+    {
             question: "Sirius Black was sent to Azkaban as it was believed he had murdered who?",
             answers: [
                 { text: "Milicent Bulstrode", correct: false },
@@ -361,4 +451,4 @@ const questions =
                 { text: "Peter Pettigrew", correct: true },
             ]
         },
-    ];
+    ]
