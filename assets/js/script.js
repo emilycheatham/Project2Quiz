@@ -1,11 +1,11 @@
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
-const resultsButton = document.getElementById('results-btn');
+const resultsButton = document.getElementById("results-btn");
 const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
-const resultsArea = document.getElementById('results-area');
-let finalScoreElement = document.getElementById('score');
+const resultsArea = document.getElementById("results-area");
+let finalScoreElement = document.getElementById("score");
 let finalScore = parseInt(finalScoreElement.innerText);
 
 /* Variable so questions are shuffled so different question is displayed each time you play */
@@ -109,11 +109,12 @@ function clearStatusClass(element) {
  * When click on results button goes to results page
 */
 resultsButton.addEventListener("click",  () => {
-    resultsButton.classList.add('hide');
-    questionContainerElement.classList.add('hide');
-    resultsArea.classList.remove('hide');
+    resultsButton.classList.add("hide");
+    questionContainerElement.classList.add("hide");
+    resultsArea.classList.remove("hide");
     finalResults();
 })
 
 function finalResults() {
+    let scoreText = document.getElementById("score-text");
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`}

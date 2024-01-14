@@ -102,6 +102,11 @@ main {
     align-items: center;
 }
 
+#mom-logo {
+    width: 150px;
+    align-items: center;
+}
+
 
 
 .hide {
