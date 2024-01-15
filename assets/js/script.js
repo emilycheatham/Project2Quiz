@@ -5,8 +5,7 @@ const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const resultsArea = document.getElementById("results-area");
-let finalScoreElement = document.getElementById("score");
-let finalScore = parseInt(finalScoreElement.innerText);
+let oldScore = parseInt(document.getElementById("score").innerText);
 
 /* Variable so questions are shuffled so different question is displayed each time you play */
 let shuffledQuestions, currentQuestionIndex;
@@ -31,6 +30,7 @@ function startGame() {
     startButton.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
+    oldScore = 0;
     questionContainerElement.classList.remove("hide");
     setNextQuestion()
 }
@@ -94,10 +94,16 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct');
-        document.getElementById("score").innerText = ++finalScore;
+        incrementScore();
     } else {
         element.classList.add('wrong');
     }
+}
+
+/* Get current score from DOM and increment by 1
+*/
+function incrementScore() {
+    document.getElementById("score").innerText = oldScore++;
 }
 
 function clearStatusClass(element) {
@@ -112,9 +118,9 @@ resultsButton.addEventListener("click",  () => {
     resultsButton.classList.add("hide");
     questionContainerElement.classList.add("hide");
     resultsArea.classList.remove("hide");
-    finalResults();
+    showResult();
 })
 
-function finalResults() {
+function showResult() {
     let scoreText = document.getElementById("score-text");
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`}
