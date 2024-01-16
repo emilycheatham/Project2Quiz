@@ -5,12 +5,12 @@ const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const resultsArea = document.getElementById("results-area");
-let oldScore = parseInt(document.getElementById("score").innerText);
+let score = 0;
 
 /* Variable so questions are shuffled so different question is displayed each time you play */
 let shuffledQuestions, currentQuestionIndex;
 
-/* Add Event Listeners to Start and Next Buttons*/ 
+/* Add Event Listeners to Start and Next Buttons*/
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
@@ -19,7 +19,7 @@ nextButton.addEventListener('click', () => {
     } else {
         resultsButton.classList.remove('hide');
     }
-})
+});
 
 /** 
  * Starts the game by hiding the start button and showing the question container element
@@ -30,9 +30,8 @@ function startGame() {
     startButton.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
-    oldScore = 0;
     questionContainerElement.classList.remove("hide");
-    setNextQuestion()
+    setNextQuestion();
 }
 
 function setNextQuestion() {
@@ -42,8 +41,8 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     const currentQuestionNumber = document.getElementById("current-question");
-    currentQuestionNumber.classList.remove("hide"); 
-    currentQuestionNumber.innerText = currentQuestionIndex + 1; 
+    currentQuestionNumber.classList.remove("hide");
+    currentQuestionNumber.innerText = currentQuestionIndex + 1;
 
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
@@ -55,7 +54,7 @@ function showQuestion(question) {
         }
         button.addEventListener("click", selectAnswer);
         answerButtonsElement.appendChild(button);
-    })
+    });
 }
 
 /* Hides the old answer buttons, to display current question's answers in buttons */
@@ -70,15 +69,20 @@ function resetState() {
  * Upon clicking an answer button
  * If the question is less than 10, it will show the next button
  * If it question 10, it will show results button
- */ 
+ */
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
     setStatusClass(document.body, correct);
+    if (correct) {
+        score++;
+        console.log('score incremented to', score);
+    }
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct);     
-    })
-    if (currentQuestionIndex < 9 ) {
+        setStatusClass(button, button.dataset.correct);
+
+    });
+    if (currentQuestionIndex < 9) {
         nextButton.classList.remove('hide');
         resultsButton.classList.add('hide');
     } else {
@@ -94,7 +98,6 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct');
-        incrementScore();
     } else {
         element.classList.add('wrong');
     }
@@ -102,9 +105,6 @@ function setStatusClass(element, correct) {
 
 /* Get current score from DOM and increment by 1
 */
-function incrementScore() {
-    document.getElementById("score").innerText = oldScore++;
-}
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
@@ -114,13 +114,14 @@ function clearStatusClass(element) {
 /** 
  * When click on results button goes to results page
 */
-resultsButton.addEventListener("click",  () => {
+resultsButton.addEventListener("click", () => {
     resultsButton.classList.add("hide");
     questionContainerElement.classList.add("hide");
     resultsArea.classList.remove("hide");
     showResult();
-})
+});
 
 function showResult() {
-    let scoreText = document.getElementById("score-text");
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`}
+    document.getElementById('score').textContent = score;
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+}
