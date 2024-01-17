@@ -123,5 +123,18 @@ resultsButton.addEventListener("click", () => {
 
 function showResult() {
     document.getElementById('score').textContent = score;
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    let scoreText = document.getElementById("score-text");
+    if (score > 8) {
+        scoreText.innerText = `You have been awarded a grade of: <b>OUTSTANDING </b>`;
+    } else if (score > 6) {
+        scoreText.innerText = `You have been awarded a grade of: <b>EXCEEDS EXPECTATIONS </b>`; 
+    } else if (score > 4) {
+        scoreText.innerText = `You have been awarded a grade of: ACCEPTABLE`;
+    } else if (score > 2) {
+        scoreText.innerText = `You have been awarded a grade of: POOR `;
+    } else if (score > 0) {
+        scoreText.innerText = `You have been awarded a grade of: DREADFUL `;
+    } else {
+        scoreText.innerText = `You have been awarded a grade of: TROLL `;
+    }
 }
