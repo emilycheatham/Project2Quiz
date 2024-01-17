@@ -142,3 +142,8 @@ function showResult() {
         scoreText.innerText = `You have been awarded a grade of: TROLL `;
     }
 }
+
+restartButton.addEventListener("click", () => {
+    resultsArea.classList.add("hide");
+    startGame();
+});
