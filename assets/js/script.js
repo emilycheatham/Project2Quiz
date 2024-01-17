@@ -5,6 +5,7 @@ const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const resultsArea = document.getElementById("results-area");
+const restartButton = document.getElementById("restart-btn");
 let score = 0;
 
 /* Variable so questions are shuffled so different question is displayed each time you play */
@@ -67,8 +68,9 @@ function resetState() {
 
 /**
  * Upon clicking an answer button
+ * If it is the correct answer, adds 1 to the incrimented score
  * If the question is less than 10, it will show the next button
- * If it question 10, it will show results button
+ * If the question is 10, it will show results button
  */
 function selectAnswer(e) {
     const selectedButton = e.target;
@@ -91,7 +93,6 @@ function selectAnswer(e) {
 }
 
 /* If the answer is correct, changes button background colour to green
-* and add point to correct counter
 * If the answer is wrong, changes button background colour to red
 */
 function setStatusClass(element, correct) {
@@ -121,9 +122,12 @@ resultsButton.addEventListener("click", () => {
     showResult();
 });
 
+/* Display set for end of game
+7 different responses based on final score*/
 function showResult() {
     document.getElementById('score').textContent = score;
     let scoreText = document.getElementById("score-text");
+    restartButton.classList.remove('hide');
     if (score > 8) {
         scoreText.innerText = `You have been awarded a grade of: <b>OUTSTANDING </b>`;
     } else if (score > 6) {

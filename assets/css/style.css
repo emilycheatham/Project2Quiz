@@ -90,8 +90,8 @@ main {
     background-color: #C00C;
 }
 
-/* Contols buttons */
-.start-btn, .next-btn, .results-btn {
+/* Controls buttons */
+.start-btn, .next-btn, .results-btn, .restart-btn {
     font-size: 1.2rem;
     font-weight: bold;
 }
