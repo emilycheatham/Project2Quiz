@@ -12,6 +12,7 @@ Awais Mirza - <https://www.youtube.com/watch?v=jvk1pFNqXaw&t=1053s>
 Giraffe Academy - https://www.youtube.com/watch?v=LQGTb112N_c
 
 Bugs found along the way:
+correct score wasn't incrementing by 1 correclty.
 
 Possible to do:
 

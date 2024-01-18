@@ -6,6 +6,7 @@ const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const resultsArea = document.getElementById("results-area");
 const restartButton = document.getElementById("restart-btn");
+const instructions = document.getElementById("instructions");
 let score = 0;
 
 /* Variable so questions are shuffled so different question is displayed each time you play */
@@ -28,6 +29,7 @@ nextButton.addEventListener('click', () => {
  * Question counter will add 1 each question
  */
 function startGame() {
+    instructions.classList.add("hide");
     startButton.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
@@ -82,7 +84,6 @@ function selectAnswer(e) {
     }
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
-
     });
     if (currentQuestionIndex < 9) {
         nextButton.classList.remove('hide');
@@ -129,17 +130,17 @@ function showResult() {
     let scoreText = document.getElementById("score-text");
     restartButton.classList.remove('hide');
     if (score > 8) {
-        scoreText.innerText = `You have been awarded a grade of: <b>OUTSTANDING </b>`;
+        scoreText.innerText = `You have been awarded a grade of: OUTSTANDING`;
     } else if (score > 6) {
-        scoreText.innerText = `You have been awarded a grade of: <b>EXCEEDS EXPECTATIONS </b>`; 
+        scoreText.innerText = `You have been awarded a grade of: EXCEEDS EXPECTATIONS`; 
     } else if (score > 4) {
         scoreText.innerText = `You have been awarded a grade of: ACCEPTABLE`;
     } else if (score > 2) {
-        scoreText.innerText = `You have been awarded a grade of: POOR `;
+        scoreText.innerText = `You have been awarded a grade of: POOR`;
     } else if (score > 0) {
-        scoreText.innerText = `You have been awarded a grade of: DREADFUL `;
+        scoreText.innerText = `You have been awarded a grade of: DREADFUL`;
     } else {
-        scoreText.innerText = `You have been awarded a grade of: TROLL `;
+        scoreText.innerText = `You have been awarded a grade of: TROLL`;
     }
 }
 
