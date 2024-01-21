@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,81 +10,79 @@
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Kanit:ital,wght@0,100;1,100&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Kanit:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;400;600&display=swap" rel="stylesheet">
-        
+
     <title>Harry Potter Quiz</title>
 </head>
+
 <body>
     <!-- Header section -->
     <header>
         <a href="index.html" aria-label="Go to home page">
-            <img id="logo" src="assets/images/harry-potter-logo.jpg" alt="Harry Potter logo" /></a>
+            <img id="logo" src="assets/images/harry-potter-logo.jpg" alt="Harry Potter logo"></a>
     </header>
 
     <main>
         <!-- Game Area -->
-    <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question-counter">
-            Question <span id="current-question">1</span> of 10 
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="question-counter">
+                    Question <span id="current-question">1</span> of 10
+                </div>
+                <!--Question and Answer buttons -->
+                <div id=question>Question displayed here</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn"> Answer A </button>
+                    <button class="btn"> Answer B </button>
+                    <button class="btn"> Answer C </button>
+                    <button class="btn"> Answer D </button>
+                </div>
             </div>
-            <!--Question and Answer buttons -->
-            <div id=question>Question displayed here</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn"> Answer A </button>
-                <button class="btn"> Answer B </button>
-                <button class="btn"> Answer C </button>
-                <button class="btn"> Answer D </button>
-            </div>
-        </div>
 
-        <!-- Instructions -->
-        <div>
-            <div class="instructions" id="instructions"> 
-                <img id="mom-logo" src="assets/images/Ministry_of_magic_logo.webp" alt="Ministry of Magic logo"
-                    aria-label="Ministry of Magic logo" />
-                <p>Welcome to your Potter Knowledge OWLs</p>
-                <p>You will recieve 10 random questions on Harry Potter Knowledge.</p>
-                <p>Each question will have 4 possible answers. You must select ONE answer. </p>
-                <p>You cannot change your answer after clicking.</p>
-                <p>If you wish to re-start the quiz, click on the Harry Potter logo</p>
-                <p>If you choose to restart, your questions may not be the same.</p>
-                <p>Good Luck</p>
-                <br>
+            <!-- Instructions -->
+            <div>
+                <div class="instructions" id="instructions">
+                    <img class="mom-logo" src="assets/images/Ministry_of_magic_logo.webp" alt="Ministry of Magic logo"
+                        aria-label="Ministry of Magic logo">
+                    <p>Welcome to your Potter Knowledge OWLs</p>
+                    <p>You will recieve 10 random questions on Harry Potter Knowledge.</p>
+                    <p>Each question will have 4 possible answers. You must select ONE answer. </p>
+                    <p>You cannot change your answer after clicking.</p>
+                    <p>If you wish to re-start the quiz, click on the Harry Potter logo</p>
+                    <p>If you choose to restart, your questions may not be the same.</p>
+                    <p>Good Luck</p>
+                    <br>
+                </div>
+                <!--Control buttons -->
+                <div class="controls">
+                    <button id="start-btn" class="start-btn btn">Start your OWLs</button>
+                    <button id="next-btn" class="next-btn btn hide">Next Question</button>
+                    <button id="results-btn" class="results-btn btn hide">See Test Results</button>
+                </div>
             </div>
-        <!--Control buttons -->
-            <div class="controls"> 
-                <button id="start-btn" class="start-btn btn">Start your OWLs</button>
-                <button id="next-btn" class="next-btn btn hide">Next Question</button>
-                <button id="results-btn" class="results-btn btn hide">See Test Results</button>
-            </div>
-        </div>
 
-        <!-- Results -->
-        <div id="results-area" class="results-area hide">
-            <img
-                id="mom-logo"
-                src="assets/images/Ministry_of_magic_logo.webp"
-                alt="Ministry of Magic logo"
-                aria-label="Ministry of Magic logo"
-            />
-            <div class="scores" id="scores">
-                <p>Congratulations, you have completed your OWLs!</p> </br>
-                <p>You have scored <span id="score">0</span> out of 10.</p> <br>
-                <p id="score-text"></p>
+            <!-- Results -->
+            <div id="results-area" class="results-area hide">
+                <img class="mom-logo" src="assets/images/Ministry_of_magic_logo.webp" alt="Ministry of Magic logo"
+                    aria-label="Ministry of Magic logo">
+                <div class="scores" id="scores">
+                    <p>Congratulations, you have completed your OWLs!</p> <br>
+                    <p>You have scored <span id="score">0</span> out of 10.</p> <br>
+                    <p id="score-text"></p>
+                </div>
+                <button class="restart-btn btn hide" id="restart-btn">Re-sit Your OWLs</button>
             </div>
-            <button class="restart-btn btn hide" id="restart-btn">Re-sit Your OWLs</button>
         </div>
-        
-    </div>
     </main>
 
     <footer>
         <p> © Created by Emily Cheatham </p>
     </footer>
-    
+
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
