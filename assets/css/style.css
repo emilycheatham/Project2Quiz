@@ -15,6 +15,10 @@ body {
     font-family: 'Arima', sans-serif;
 }
 
+.hide {
+    display: none;
+}
+
 /*Header and Logo */
 header {
     background: #000;
@@ -61,6 +65,7 @@ main {
     border-radius: 5px;
     justify-content: center;
     margin: 5px 0;
+    padding: 7px;
 }
 
 /*Quiz container - question counter, questions, and answer buttons */
@@ -98,7 +103,9 @@ main {
 
 #answer-buttons button{
     width: 90%;
-    margin: 5px 0;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.2em;
 }
 
 .btn {
@@ -135,12 +142,31 @@ main {
     align-items: center;
 }
 
-.hide {
-    display: none;
+/* Results */
+#results-area > img {
+    display: flex;
+    text-align: center;
+    margin: auto;
 }
 
-/* Results */
+#scores {
+    border-style: solid;
+    background: rgba(237, 234, 234, 0.7);
+    border: 1px solid;
+    border-color: #000;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    padding: 7px;
+}
 
+#restart-btn {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
 
 /* footer */
 footer {

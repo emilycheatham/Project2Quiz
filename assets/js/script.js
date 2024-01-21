@@ -130,17 +130,17 @@ function showResult() {
     let scoreText = document.getElementById("score-text");
     restartButton.classList.remove('hide');
     if (score > 8) {
-        scoreText.innerText = `You have been awarded a grade of: OUTSTANDING`;
+        scoreText.innerText = `You have been awarded a grade of: \n OUTSTANDING`;
     } else if (score > 6) {
-        scoreText.innerText = `You have been awarded a grade of: EXCEEDS EXPECTATIONS`; 
+        scoreText.innerText = `You have been awarded a grade of: \n EXCEEDS EXPECTATIONS`; 
     } else if (score > 4) {
-        scoreText.innerText = `You have been awarded a grade of: ACCEPTABLE`;
+        scoreText.innerText = `You have been awarded a grade of: \n ACCEPTABLE`;
     } else if (score > 2) {
-        scoreText.innerText = `You have been awarded a grade of: POOR`;
+        scoreText.innerText = `You have been awarded a grade of: \n POOR`;
     } else if (score > 0) {
-        scoreText.innerText = `You have been awarded a grade of: DREADFUL`;
+        scoreText.innerText = `You have been awarded a grade of: \n DREADFUL`;
     } else {
-        scoreText.innerText = `You have been awarded a grade of: TROLL`;
+        scoreText.innerText = `You have been awarded a grade of: \n TROLL`;
     }
 }
 
