@@ -181,15 +181,15 @@ footer p {
 
 /* media query for tablets (768px) and larger */
 @media screen and (min-width:768px) {
-.btn-grid {
+
+}
+
+/* media query for laptops(1024px) and larger*/
+@media screen and (min-width:1024px) {
+    .btn-grid {
         display: grid;
         grid-template-columns: repeat(2, auto);
         gap: 10px;
         margin: 20px;
     }
-}
-
-/* media query for laptops(1024px) and larger*/
-@media screen and (min-width:1024px) {
-    
 }
