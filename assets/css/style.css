@@ -7,11 +7,12 @@
 
 /* General styles */
 body {
-    background: url("../images/scroll.jpg") no-repeat center center/cover;min-height: 100vh;
+    background: url("../images/scroll.jpg") no-repeat center center/cover;
+    position: relative;
     display: flex;
     flex-direction: column;
     /* Font styles */
-    font-family: 'Arima', sans-serfif;
+    font-family: 'Arima', sans-serif;
 }
 
 /*Header and Logo */
@@ -32,16 +33,20 @@ header {
     padding: 0;
 }
 
+/* Main */
 main {
-    background: url("../images/scroll.jpg") no-repeat center center/cover;
-    position: relative;
-    /* Make main elelment take up any surplus space to push footer down */
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 64px;
-    width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
+
 /* Instructions*/
+#mom-logo {
+    width: 150px;
+    align-items: center;
+}
+
 #instructions {
     text-align: center;
     padding: 5px;
@@ -55,32 +60,45 @@ main {
     border-color: #000;
     border-radius: 5px;
     justify-content: center;
+    margin: 5px 0;
 }
 
 /*Quiz container - question counter, questions, and answer buttons */
 .container {
     display: block;
-    width: 90%;
     border-radius: 5px;
     padding: 20px;
     padding-top: 30px;
 }
 
 #question-counter {
-    padding: 20px 0;
+    padding: 5px 0;
     margin-bottom: 20px;
+    border: 1px solid;
+    border-color: #000;
+    border-radius: 5px;
+    background:rgba(237, 234, 234, 0.7);
+    text-align: center;
 }
 
 #question {
     text-align: center;
-    font-size: 25px;
+    font-size: 1.7em;
+    padding: 3px;
 }
 
 .btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
+    display: block;
     margin: 20px;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#answer-buttons button{
+    width: 90%;
+    margin: 5px 0;
 }
 
 .btn {
@@ -117,15 +135,14 @@ main {
     align-items: center;
 }
 
-#mom-logo {
-    width: 150px;
-    align-items: center;
-}
-
 .hide {
     display: none;
 }
 
+/* Results */
+
+
+/* footer */
 footer {
     background: #000;
     color: #c39a1c;
@@ -134,4 +151,19 @@ footer {
 
 footer p {
     padding: 5px;
+}
+
+/* media query for tablets (768px) and larger */
+@media screen and (min-width:768px) {
+.btn-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        margin: 20px;
+    }
+}
+
+/* media query for laptops(1024px) and larger*/
+@media screen and (min-width:1024px) {
+    
 }

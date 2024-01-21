@@ -272,7 +272,7 @@ const questions =
             ]
         },
         {
-            question: "What magical village do thrid years and above get to visit?",
+            question: "What magical village do third years and above get to visit?",
             answers: [
                 { text: "Hogsback", correct: false },
                 { text: "Hogginton", correct: false },
