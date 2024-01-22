@@ -181,15 +181,21 @@ footer p {
 
 /* media query for tablets (768px) and larger */
 @media screen and (min-width:768px) {
-
-}
-
-/* media query for laptops(1024px) and larger*/
-@media screen and (min-width:1024px) {
     .btn-grid {
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 45%);
         gap: 10px;
         margin: 20px;
+    }
+
+    .btn-grid > btn {
+        padding: 10px;
+    }
+
+    #scores {
+        width: 80%;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 20px;
     }
 }
