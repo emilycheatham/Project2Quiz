@@ -141,9 +141,9 @@ Through the explortion of Harry Potter inspired fonts, I discovered the Jolly Lo
 
 ### Images
 
-The Harry Potter Logo was sourced from: [Harry Potter Fan Zone](https://media.harrypotterfanzone.com/harry-potter-logo-tutorial-final.jpg)
-The scroll background was sourced from: [Katie Apex](http://youve-reached-the-apex.weebly.com/blog/hogwarts-acceptance-letter)
-The Ministry of Magic Logo was dourced from: [Wikipedia](https://en.wikipedia.org/wiki/Ministry_of_Magic)
+The Harry Potter Logo was sourced from: [Harry Potter Fan Zone](https://media.harrypotterfanzone.com/harry-potter-logo-tutorial-final.jpg).
+The scroll background was sourced from: [Katie Apex](http://youve-reached-the-apex.weebly.com/blog/hogwarts-acceptance-letter).
+The Ministry of Magic Logo was dourced from: [Wikipedia](https://en.wikipedia.org/wiki/Ministry_of_Magic).
 
 ### Accessibility
 
@@ -175,10 +175,6 @@ ___
 
 The Logo, which is also a link to the home page, is present on all pages on the website. By clicking on this, the user can navigate back to the Home page at any moment of the game. This is explained in the introduction, but also when hovered over, the title appears to help the user understand that it is a link.
 
-![nav bar - mobile](assets/images/readme/navbar-mobile.png)
-![nav bar - mobile](assets/images/readme/navbar-mobile2.png)
-
-Based on a media query, for mobile devices it become a dropdown "hamburger menu" feature. This allows for a better use of the space on smaller devices.
 
 - **Hero image**
 

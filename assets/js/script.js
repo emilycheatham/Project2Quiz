@@ -146,5 +146,6 @@ function showResult() {
 
 restartButton.addEventListener("click", () => {
     resultsArea.classList.add("hide");
+    score = 0;
     startGame();
 });
