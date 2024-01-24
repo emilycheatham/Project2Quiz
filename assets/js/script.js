@@ -7,6 +7,7 @@ const answerButtonsElement = document.getElementById("answer-buttons");
 const resultsArea = document.getElementById("results-area");
 const restartButton = document.getElementById("restart-btn");
 const instructions = document.getElementById("instructions");
+const playerName = document.getElementById("player-name");
 let score = 0;
 
 /* Variable so questions are shuffled so different question is displayed each time you play */
@@ -129,6 +130,8 @@ function showResult() {
     document.getElementById('score').textContent = score;
     let scoreText = document.getElementById("score-text");
     restartButton.classList.remove('hide');
+    let player = playerName.value;
+    document.getElementById("name").innerText = `${player}`;
     if (score > 8) {
         scoreText.innerText = `You have been awarded a grade of: \n OUTSTANDING`;
     } else if (score > 6) {
