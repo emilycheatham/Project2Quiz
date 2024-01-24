@@ -176,81 +176,55 @@ ___
 The Logo, which is also a link to the home page, is present on all pages on the website. By clicking on this, the user can navigate back to the Home page at any moment of the game. This is explained in the introduction, but also when hovered over, the title appears to help the user understand that it is a link.
 
 
-- **Hero image**
+- **Instruction Area**
+The instructions is the first area the user see.s It draws them in the the scroll background and the Ministry of Magic logo.
+This area makes it clear what the quiz is about. It lays out how many questions the user will recieve, how to answer the questions and make it clear that once they click they cannot change their answer. It states how to restart, but warns them that the questions may be different. 
+The start button is large and central, making it clear hwo to start the quiz.
 
-This section is the first thing the user sees opening the home page. It is clear what the site is about. It uses colours that match the colour scheme. The image involve a range of people of different ages, genders and races, showing the inclusive nature of the studio.
-The semi-transparent overlay draws the eye, making it very clear what the site is about and where to find the studio. this stretches 60% over the width of the image.
+![Instructions page](assets/images/ReadMe/instructions.png)
 
-![Hero](assets/images/readme/hero.png)
-![Hero-mobile](assets/images/readme/hero-mobile.png)
-
-On smaller devices, the semi-transparent overlay is 80% width to ensure all text is included whilst still being clear.
-
-- **Why Practice Yoga section**
+- **Question Area**
   
-This section highlights the benefits of yoga.
-Its layout is responsive to different devices.
+This section contains the 10 questions. At the top, it is clear what question out of 10 they are on. The question is large. 4 options are provided. The buttons are spaced far enough appart to reduce the chance of accidental clicking.
+This is responsive, with the buttons turning into a 2 x 2 grid for larger devices.
 
-![Why-practice-yoga-mobile](assets/images/readme/practice-small.png)
-![Why-practice-yoga-tablet](assets/images/readme/practice-mobile.png)
-![Why-practice-yoga-desktop](assets/images/readme/practice-desktop.png)
+![Questions - mobile](assets/images/ReadMe/questions-mobile.png)
+![Questions - larger devices](assets/images/ReadMe/questions-larger.png)
 
-- **Types of yoga offered section**
 
-This section allows the user to have  brief overview of the different types of yoga offered in the studio. It gives enough information for users to be able to decide based on their experience and any physical requirements.
-It is reponsive using flex-box to fit the text into all screen types.
+- **Correct / Incorrect Answers**
 
-![Type-of-yoga-mobile](assets/images/readme/types-mobile.png)
-![Type-of-yoga-tablet](assets/images/readme/types-tablets.png)
-![Type-of-yoga-desktop](assets/images/readme/types-desktop.png)
+When an answer has been selected, the buttons change colour to show which answer is correct and which are incorrect. The next button shows. There is no timer, as this allows the user to go onto the next question in their own time.
 
-- **Table for Class section**
-This table is responsive. When hovered over, the row will highlight pink to make it easier to read certain types of yoga classes.
-The divs are responsive. When in mobile view, the text is above the table. The table can be scrolled left to right so all information can be seen even on smaller devices with overflow.
-On larger devices, the text moves to the left of the table, and the table expands to fill the width of the device's screen.
-![table-mobile](assets/images/readme/table-mobile.png)
-![table-tablet](assets/images/readme/table-tablet.png)
-![table-desktop](assets/images/readme/table-desktop.png)
+![Answers- mobile](assets/images/ReadMe/answers-mobile.png)
+![Answers - larger devices](assets/images/ReadMe/answers-larger.png)
 
-- **Gallery section**
 
-This section provides 12 photos which include a range of ages, genders, abilities and classes. Set as grid, the images are all the same size. They are responsive to the device and will change how many images are on a row depending on the device size.
+- **Results Page**
+This page tells the user what their score out of 10 was. The ministry of Magic logo is shown again to link it back to the instructions page. Based on their score, they are awarded an OWL grade:
+0 = Troll
+1-2 = Dreaful
+3-4 = Poor
+5-6 = Acceptable
+7-8 = Exceeds Expectations
+9-10 = Outstanding
+An option to restart the quiz is diplayed. There is no timer, this allows the user to start again in their own time.
+ 
+![Results-mobile](assets/images/ReadMe/results-mobile.png)
+![Results-larger devices](assets/images/ReadMe/results-larger.png)
 
-![Gallery-mobile](assets/images/readme/gallery-mobile.png)
-![Gallery-desktop](assets/images/readme/gallery-desktop.png)
-
-- **Sign Up section**
-
-This section allows for users to ask an enquiry about one or more yoga class. It also allows for users to sign up for a class. Thy can select one or multiple class types. They can only do an enquiry or sign up, not both.
-This form is responsive to different devices.
-
-![Signup-mobile](assets/images/readme/sign-up-mobile.png)
-![Signup-tablet](assets/images/readme/sign-up-tablet.png)
-![Signup-desktop](assets/images/readme/sign-up-desktop.png)
-
-- **Footer**
-
-The Footer contains the links to the social media - these are all active. It also provides the address, phone number and e-mail address. The email address will open in a new tab. The footer is responsive on mobiles.
-![Footer-mobile](assets/images/readme/footer-mobile.png)
-![Footer-desktop](assets/images/readme/footer-desktop.png)
 
 ## Feature Considerations
 
-### Signup form processing
+### Sound
+At present no sound is used. It was considered having the theme tune as background music, but it was deemed not to add much to the experience and the image to mute the sound was out of place in the header, with the minimalistic logo.
+Sounds for getting the answer correct or wrong was considered, but no relevant sound could be found.
 
-Currently, once the form on the Sign Up page is completed, it takes you to a thank you page. The data is not being processed or stored. This is also due to it being a fictional company. However, the data would ideally be stored, processed and analysed. Using this, online booking could be made with instant feedback, instead of having to wait for an e-mail response. This would make it more efficient for the company, and provide a more efficient and personalised quality experience for the user.
+### Name
+An option for the user to input their name. This would allow for the results page to be personalised to the user.
 
-### Popup preview of Google Maps
+#
 
-In the wireframes, googlemaps was intetend to be placed in the footer. This was removed as I felt it would have been too large. This could be used in the About Us page, or as a pop up feature when the address in the footer is clicked on/hovered over.
-
-### Link buttons
-
-Originally the anchor links on the index page and the thank you page were buttons. They grew when you hovered over them. However, validator checks didn't like buttons and anchors together. I would like to redo these so they all look the same, and increase in size when hovered. The font would need shading to stand out more. I would like it to link to a certain section rather than just a page.
-
-### Accessibility
-
-Whilst the lighthouse checks rated the accessibility in the 90's, there is still room for improvement. One of the suggestions was that background and foreground colours do not have sufficent contrast ratio. Therefore, I would intend on experimenting with changing these to improve this contrast further whist still maintaining the colour scheme.
 I would use the site I found at the end of my project, Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/)to improve access for those with colour-blindness.
 
 ___
