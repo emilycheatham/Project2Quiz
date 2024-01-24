@@ -149,6 +149,7 @@ The Ministry of Magic Logo was dourced from: [Wikipedia](https://en.wikipedia.or
 
 - Active tags have been added to menus to allow screen readers to see which page is currently open.
 - Aria labels have been added on all images across the site to provide information to screen readers.
+- I checked the site against Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/) to check colour balance, to help improve access for those with colour-blindness.
 
 ### Visual Effects
 
@@ -221,28 +222,19 @@ An option to restart the quiz is diplayed. There is no timer, this allows the us
 At present no sound is used. It was considered having the theme tune as background music, but it was deemed not to add much to the experience and the image to mute the sound was out of place in the header, with the minimalistic logo.
 Sounds for getting the answer correct or wrong was considered, but no relevant sound could be found.
 
-
-I would use the site I found at the end of my project, Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/)to improve access for those with colour-blindness.
-
 ___
 
 # Technologies
 
-- HTML to accomplish the structure of the website.
-- CSS to style the website.
-- [Balsamiq](https://balsamiq.com/wireframes/)- Used to create the wireframes
+- Languages: HTML, CSS, JavaScript
 - Git - For version control.
 - [GitHub](https://GitHub.com/) - To save and store the files for the website
 - [Gitpod](https://gitpod.io/) - IDE to develop the website
 - [Google Fonts](https://fonts.google.com/) - To import the fonts used on the wesbite
-- [FontAwesome](https://fontawesome.com/) - For the inconography on the wesbite. v5.15.1 Icons.
-- [Google Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)- To troubleshoot, debugging, inspecting page's elements, testing responsiveness and solvingiissues with responsiveness and styling.
-- Paint - To crop images
-- [CloudConvert](https://cloudconvert.com/webp-converter) and Pixelied [Pixelied](https://pixelied.com/convert/jpg-converter/jpg-to-webp) - to optomise larger images to reduce the storage and enhance wesbite performance.
-- [pexels](https://www.pexels.com/) - To find and download royalty free images
+- [Google Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)- To troubleshoot, debugging, inspecting page's elements, testing responsiveness and solving issues with responsiveness and styling.
 - [Favicon.cc](https://www.favicon.cc/) - to create the website favicon.
-- [Colorhunt](https://colorhunt.co/) - to source colour palette
 - Google Chrome's [Lighthouse](https://developers.google.com/web/tools/lighthouse) - to access preformance and accesibility
+- Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/) - to check visuals for colour blind anomalies
 - [W3C HTML Markup Validator](https://validator.w3.org/) to validate HTML code.
 - [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code.
 - [Markdown Tables Generator](https://www.tablesgenerator.com/) to generate tables for the readme file.
@@ -252,7 +244,7 @@ ___
 
 # Testing
 
-Testing was ongoing throughout the entire build. Google Chrome Developer Dev tools was utilised to pinpoint and troubleshoot any issues. Every page was viewed on Dev Tools to check responsivity on different devices. The site was also trialled on a number of browsers (Google chrome, safari, Mozilla)
+Testing was ongoing throughout the entire build. Google Chrome Developer Dev tools was utilised to pinpoint and troubleshoot any issues. Every page was viewed on Dev Tools to check responsivity on different devices. The site was also trialled on a number of browsers (Google Chrome, Safari, Mozilla)
 
 # User Stories
 
@@ -360,7 +352,7 @@ ___
 This project was deployed to GitHub pages. The steps to deploy are as follows:
 
 1. Log in (or sign up) to Github.
-2. Find the repository for this project, Yoga For You.
+2. Find the repository for this project, Project 2 Quiz
 3. Click on the Settings from the Repositories sub-headings.
 4. Click on the Pages link in the left hand side navigation bar.
 5. In the Source heading, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
@@ -375,7 +367,7 @@ The live link can be found [here](https://emilycheatham.github.io/p1_yoga_for_yo
 - **Clone the repository**
 
 1. Log in (or sign up) to GitHub.
-2. Navigate to the GitHub Repository for this project, emilycheatham/p1_yoga_for_you
+2. Navigate to the GitHub Repository for this project, emilycheatham/Project2Quiz
 3. Click the code drop-down menu. Select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open a terminal in the directory of your choice, type 'git clone' and paste the link from step 3.
 5. A clone of the repository will now be created on your machine.
