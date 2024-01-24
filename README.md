@@ -178,10 +178,11 @@ The Logo, which is also a link to the home page, is present on all pages on the 
 
 - **Instruction Area**
 The instructions is the first area the user see.s It draws them in the the scroll background and the Ministry of Magic logo.
-This area makes it clear what the quiz is about. It lays out how many questions the user will recieve, how to answer the questions and make it clear that once they click they cannot change their answer. It states how to restart, but warns them that the questions may be different. 
+It has a text input box so the user can enter their name. This will be used later for the results.
+This instructions area makes it clear what the quiz is about. It lays out how many questions the user will recieve, how to answer the questions and make it clear that once they click they cannot change their answer. It states how to restart, but warns them that the questions may be different. 
 The start button is large and central, making it clear hwo to start the quiz.
 
-![Instructions page](assets/images/ReadMe/instructions.png)
+![Instructions page](assets/images/ReadMe/instruction-mobile.png)
 
 - **Question Area**
   
@@ -201,7 +202,7 @@ When an answer has been selected, the buttons change colour to show which answer
 
 
 - **Results Page**
-This page tells the user what their score out of 10 was. The ministry of Magic logo is shown again to link it back to the instructions page. Based on their score, they are awarded an OWL grade:
+This page pulls their name from the text input in the instructions, and places their name on the results page. This page tells the user what their score out of 10 was. The ministry of Magic logo is shown again to link it back to the instructions page. Based on their score, they are awarded an OWL grade:
 0 = Troll
 1-2 = Dreaful
 3-4 = Poor
@@ -220,10 +221,6 @@ An option to restart the quiz is diplayed. There is no timer, this allows the us
 At present no sound is used. It was considered having the theme tune as background music, but it was deemed not to add much to the experience and the image to mute the sound was out of place in the header, with the minimalistic logo.
 Sounds for getting the answer correct or wrong was considered, but no relevant sound could be found.
 
-### Name
-An option for the user to input their name. This would allow for the results page to be personalised to the user.
-
-#
 
 I would use the site I found at the end of my project, Toptal [Colorfilter](https://www.toptal.com/designers/colorfilter/)to improve access for those with colour-blindness.
 
