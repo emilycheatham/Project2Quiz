@@ -251,11 +251,11 @@ Testing was ongoing throughout the entire build. Google Chrome Developer Dev too
 | Expectations                              | realisations                      |
 |-------------------------------------------|-----------------------------------|
 |**As a first time user**                   |                                   |
-| I want to navigate the site easily        | The sticky nav bar allows the user to easily navigate on all devices and pages|
-| I want to know where the studio is        | The hero image on the home page states it's in Richmond, London. The footer on all pages gives the exact address of the studio. |
-|I want to know what types of yoga are offered and which one would suit me. | The home page has the 8 types of yoga offered. It gives a brief over view of what it is, who it is suitable for. The 3 event classes are explained on the home page. |
-| I want to know the cost of the classes. | The price for individual classes and membership is stated on the About-Us page |
-| I want to know when the classes are offered to see which one would suit me | The times of the classes are in a clear table on the About us page. |
+| I want to understand the purpose of the website and how to use it.       | The first page I see is an instructions page. It makes it clear it is a quiz. Lays out the instrctions. The star button is large and prominent.|
+| I want to be able to play the game easily       | There are 4 options to chose from. You click on one then clikc the next button. All buttons are large and clear. |
+|I want to know what the correct answer to the game is. | After selecting and asnwer, the correct answer background turns green. The incorrect answer's background turns red. It does not move on until the user is ready. |
+| I want to know my score. | The user's score out of 10 is displayed at the end.|
+| I want to be able to navigate easily. | The logo returns the user to the home screen.  |
 | I want to know what things I need to bring | The about us page states the equipment the studio provides. It says you only need to bring water and a towel.|
 | I want to be able to contact the studio. | Address, e-mail and phone number are on the footer of every page. The Sign up page allows for enquiries to be made. |
 |**As a returning and frequent user**                   |                                   |
