@@ -131,7 +131,7 @@ function showResult() {
     let scoreText = document.getElementById("score-text");
     restartButton.classList.remove('hide');
     let player = playerName.value;
-    document.getElementById("name").innerText = `${player}`;
+    document.getElementById("name").innerText = `${ player}`;
     if (score > 8) {
         scoreText.innerText = `You have been awarded a grade of: \n OUTSTANDING`;
     } else if (score > 6) {
