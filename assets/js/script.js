@@ -14,13 +14,20 @@ let score = 0;
 let shuffledQuestions, currentQuestionIndex;
 
 /* Add Event Listeners to Start and Next Buttons*/
-startButton.addEventListener("click", startGame);
-nextButton.addEventListener('click', () => {
+startButton.addEventListener("click", () => {
+    if (playerName.value.trim() === "") {
+        alert("Please enter your name");
+    } else {
+        startGame();
+}
+
+nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     if (currentQuestionIndex < 10) {
         setNextQuestion();
+        console.log();
     } else {
-        resultsButton.classList.remove('hide');
+        resultsButton.classList.remove("hide");
     }
 });
 
@@ -63,7 +70,7 @@ function showQuestion(question) {
 
 /* Hides the old answer buttons, to display current question's answers in buttons */
 function resetState() {
-    nextButton.classList.add('hide');
+    nextButton.classList.add("hide");
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -81,16 +88,16 @@ function selectAnswer(e) {
     setStatusClass(document.body, correct);
     if (correct) {
         score++;
-        console.log('score incremented to', score);
+        console.log("score incremented to", score);
     }
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     });
     if (currentQuestionIndex < 9) {
-        nextButton.classList.remove('hide');
-        resultsButton.classList.add('hide');
+        nextButton.classList.remove("hide");
+        resultsButton.classList.add("hide");
     } else {
-        resultsButton.classList.remove('hide');
+        resultsButton.classList.remove("hide");
     }
 }
 
@@ -100,9 +107,9 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct');
+        element.classList.add("correct");
     } else {
-        element.classList.add('wrong');
+        element.classList.add("wrong");
     }
 }
 
@@ -110,8 +117,8 @@ function setStatusClass(element, correct) {
 */
 
 function clearStatusClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
+    element.classList.remove("correct");
+    element.classList.remove("wrong");
 }
 
 /** 
@@ -127,11 +134,11 @@ resultsButton.addEventListener("click", () => {
 /* Display set for end of game
 7 different responses based on final score*/
 function showResult() {
-    document.getElementById('score').textContent = score;
+    document.getElementById("score").textContent = score;
     let scoreText = document.getElementById("score-text");
-    restartButton.classList.remove('hide');
+    restartButton.classList.remove("hide");
     let player = playerName.value;
-    document.getElementById("name").innerText = `${ player}`;
+    document.getElementById("name").innerText = `${player}`;
     if (score > 8) {
         scoreText.innerText = `You have been awarded a grade of: \n OUTSTANDING`;
     } else if (score > 6) {
@@ -151,4 +158,5 @@ restartButton.addEventListener("click", () => {
     resultsArea.classList.add("hide");
     score = 0;
     startGame();
-});
+}
+)})
